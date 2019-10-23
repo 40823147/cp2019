@@ -1,12 +1,13 @@
-<h1>About</h1>
-<h2>Site Map</h2>
-<h2>reveal</h2>
-<h2>blog</h2>
-<h1>Tasks</h1>
-<h2>Tasks1</h2>
-<h2>Tasks2</h2>
-<h3>Dart2 基本語法</h3>
-<h4>W4</h4>
+<h1>Dart 迴圈程式</h1>
+<p>W1</p>
+<p>Gita:<a href="https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2">https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
+<p>Dartpad:<a href="https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2">https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
+<p>原始碼:</p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">void main() {
+    print("哈囉!");
+}</pre>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2" width="800"></iframe></p>
+<h4>W2</h4>
 <p><span>Gits:<a href="https://gist.github.com/40823147/33eae5a0423ed36e8fe679641932807d">https://gist.github.com/40823147/33eae5a0423ed36e8fe679641932807d</a></span></p>
 <p><a href="https://dartpad.dev/embed-inline.html?id=bb67ffa422a777dbd5148a552f3dcfc2"><span>Dartpad：</span></a><a href="https://mde.tw/dartpad/?id=33eae5a0423ed36e8fe679641932807d">https://mde.tw/dartpad/?id=33eae5a0423ed36e8fe679641932807d</a></p>
 <p>原始碼:</p>
@@ -24,7 +25,56 @@ main(){
 }
 </pre>
 </div>
-<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=33eae5a0423ed36e8fe679641932807d" width="800"></iframe></p>
-<h1>Github</h1>
-<h1>DartLang</h1>
-<h1>Reference</h1>
+<br/><br/><br/><br/><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=33eae5a0423ed36e8fe679641932807d" width="800"></iframe>Dart 亂數分組
+<p>Gits:<a href="https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c">https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c</a></p>
+<p>Dartpad:<a href="https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c">https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c</a></p>
+<p>原始碼:</p>
+<div class="line number1 index0 alt2"><code class="dart keyword">import</code> <code class="dart string">'dart:html'</code><code class="dart plain">;</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="dart keyword">void</code> <code class="dart plain">main() {</code></div>
+<div class="line number4 index3 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每一組 10 人</code></div>
+<div class="line number5 index4 alt2"><code class="dart spaces">  </code><code class="dart plain">int num = 10;</code></div>
+<div class="line number6 index5 alt1"><code class="dart spaces">  </code><code class="dart comments">// 組序由 1 開始</code></div>
+<div class="line number7 index6 alt2"><code class="dart spaces">  </code><code class="dart plain">int gth = 1;</code></div>
+<div class="line number8 index7 alt1"><code class="dart spaces">  </code><code class="dart comments">// 迴圈序號變數</code></div>
+<div class="line number9 index8 alt2"><code class="dart spaces">  </code><code class="dart plain">int i;</code></div>
+<div class="line number10 index9 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每組學員暫存數列</code></div>
+<div class="line number11 index10 alt2"><code class="dart spaces">  </code><code class="dart plain">var gp_list = [];</code></div>
+<div class="line number12 index11 alt1"><code class="dart spaces">  </code><code class="dart comments">// 全班分組數列</code></div>
+<div class="line number13 index12 alt2"><code class="dart spaces">  </code><code class="dart plain">var cp2019 = [];</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="dart spaces">  </code><code class="dart plain">HttpRequest.getString(</code></div>
+<div class="line number16 index15 alt1"><code class="dart spaces">          </code><code class="dart string">'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt'</code><code class="dart plain">)</code></div>
+<div class="line number17 index16 alt2"><code class="dart spaces">      </code><code class="dart plain">.then((String resp) {</code></div>
+<div class="line number18 index17 alt1"><code class="dart spaces">    </code><code class="dart comments">// 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列</code></div>
+<div class="line number19 index18 alt2"><code class="dart spaces">    </code><code class="dart plain">var stud_list = resp.trim().split(</code><code class="dart string">"\n"</code><code class="dart plain">);</code></div>
+<div class="line number20 index19 alt1"><code class="dart spaces">    </code><code class="dart comments">// 數列利用 shuffle() 方法以隨機方法弄亂順序</code></div>
+<div class="line number21 index20 alt2"><code class="dart spaces">    </code><code class="dart plain">stud_list.shuffle();</code></div>
+<div class="line number22 index21 alt1"><code class="dart spaces">    </code><code class="dart comments">// 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組</code></div>
+<div class="line number23 index22 alt2"><code class="dart spaces">    </code><code class="dart keyword">for</code> <code class="dart plain">(i = 0; i &lt; stud_list.length; i++) {</code></div>
+<div class="line number24 index23 alt1"><code class="dart spaces">      </code><code class="dart comments">// 0, 1~(num-1), num</code></div>
+<div class="line number25 index24 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
+<div class="line number26 index25 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list = [];</code></div>
+<div class="line number27 index26 alt2"><code class="dart spaces">        </code><code class="dart comments">// 列印區隔符號</code></div>
+<div class="line number28 index27 alt1"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">'='</code> <code class="dart plain">* 20);</code></div>
+<div class="line number29 index28 alt2"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">"group $gth :"</code><code class="dart plain">);</code></div>
+<div class="line number30 index29 alt1"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
+<div class="line number31 index30 alt2"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
+<div class="line number32 index31 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
+<div class="line number33 index32 alt2"><code class="dart spaces">        </code><code class="dart plain">gth = gth + 1;</code></div>
+<div class="line number34 index33 alt1"><code class="dart spaces">      </code><code class="dart plain">} </code><code class="dart keyword">else</code> <code class="dart plain">{</code></div>
+<div class="line number35 index34 alt2"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
+<div class="line number36 index35 alt1"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
+<div class="line number37 index36 alt2"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
+<div class="line number38 index37 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
+<div class="line number39 index38 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
+<div class="line number40 index39 alt1"><code class="dart spaces">        </code><code class="dart comments">// 逐步將各組暫存的分組數列加入全班分組數列中</code></div>
+<div class="line number41 index40 alt2"><code class="dart spaces">        </code><code class="dart plain">cp2019.add(gp_list);</code></div>
+<div class="line number42 index41 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
+<div class="line number43 index42 alt2"><code class="dart spaces">    </code><code class="dart plain">}</code></div>
+<div class="line number44 index43 alt1"><code class="dart spaces">    </code><code class="dart comments">// 列出全班分組數列</code></div>
+<div class="line number45 index44 alt2"><code class="dart spaces">    </code><code class="dart plain">print(cp2019);</code></div>
+<div class="line number46 index45 alt1"><code class="dart spaces">  </code><code class="dart plain">});</code></div>
+<div class="line number47 index46 alt2"><code class="dart plain">}</code></div>
+<div class="line number47 index46 alt2"><code class="dart plain"></code></div>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=cf15f2e897874078c14b0d61b97e3d3c" width="800"></iframe></p>

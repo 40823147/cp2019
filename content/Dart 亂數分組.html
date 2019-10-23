@@ -138,7 +138,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Site Map.html'>Site Map</a><li><a href='reveal.html'>reveal</a><li><a href='blog.html'>blog</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='Tasks1.html'>Tasks1</a><li class='has-children'><a href='Tasks2.html'>Tasks2</a><ul class='dropdown'><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a></li></li></ul></ul><li><a href='Github.html'>Github</a><li><a href='DartLang.html'>DartLang</a><li><a href='Reference.html'>Reference</a></li>
+                     <li><a href='Dart 迴圈程式.html'>Dart 迴圈程式</a><li><a href='Dart 亂數分組.html'>Dart 亂數分組</a></li>
                       </ul>
                 </nav>
               </div>
@@ -149,8 +149,59 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Tasks << <a href='Tasks.html'>Previous</a> <a href='Tasks2.html'>Next</a> >> Tasks2<br /><h1>Tasks1</h1>
-<br />Tasks << <a href='Tasks.html'>Previous</a> <a href='Tasks2.html'>Next</a> >> Tasks2</div>
+    <div id="tipue_search_content">Dart 迴圈程式 << <a href='Dart 迴圈程式.html'>Previous</a> <br /><h1>Dart 亂數分組</h1>
+<p>Gits:<a href="https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c">https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c</a></p>
+<p>Dartpad:<a href="https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c">https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c</a></p>
+<p>原始碼:</p>
+<div class="line number1 index0 alt2"><code class="dart keyword">import</code> <code class="dart string">'dart:html'</code><code class="dart plain">;</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="dart keyword">void</code> <code class="dart plain">main() {</code></div>
+<div class="line number4 index3 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每一組 10 人</code></div>
+<div class="line number5 index4 alt2"><code class="dart spaces">  </code><code class="dart plain">int num = 10;</code></div>
+<div class="line number6 index5 alt1"><code class="dart spaces">  </code><code class="dart comments">// 組序由 1 開始</code></div>
+<div class="line number7 index6 alt2"><code class="dart spaces">  </code><code class="dart plain">int gth = 1;</code></div>
+<div class="line number8 index7 alt1"><code class="dart spaces">  </code><code class="dart comments">// 迴圈序號變數</code></div>
+<div class="line number9 index8 alt2"><code class="dart spaces">  </code><code class="dart plain">int i;</code></div>
+<div class="line number10 index9 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每組學員暫存數列</code></div>
+<div class="line number11 index10 alt2"><code class="dart spaces">  </code><code class="dart plain">var gp_list = [];</code></div>
+<div class="line number12 index11 alt1"><code class="dart spaces">  </code><code class="dart comments">// 全班分組數列</code></div>
+<div class="line number13 index12 alt2"><code class="dart spaces">  </code><code class="dart plain">var cp2019 = [];</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="dart spaces">  </code><code class="dart plain">HttpRequest.getString(</code></div>
+<div class="line number16 index15 alt1"><code class="dart spaces">          </code><code class="dart string">'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt'</code><code class="dart plain">)</code></div>
+<div class="line number17 index16 alt2"><code class="dart spaces">      </code><code class="dart plain">.then((String resp) {</code></div>
+<div class="line number18 index17 alt1"><code class="dart spaces">    </code><code class="dart comments">// 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列</code></div>
+<div class="line number19 index18 alt2"><code class="dart spaces">    </code><code class="dart plain">var stud_list = resp.trim().split(</code><code class="dart string">"\n"</code><code class="dart plain">);</code></div>
+<div class="line number20 index19 alt1"><code class="dart spaces">    </code><code class="dart comments">// 數列利用 shuffle() 方法以隨機方法弄亂順序</code></div>
+<div class="line number21 index20 alt2"><code class="dart spaces">    </code><code class="dart plain">stud_list.shuffle();</code></div>
+<div class="line number22 index21 alt1"><code class="dart spaces">    </code><code class="dart comments">// 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組</code></div>
+<div class="line number23 index22 alt2"><code class="dart spaces">    </code><code class="dart keyword">for</code> <code class="dart plain">(i = 0; i &lt; stud_list.length; i++) {</code></div>
+<div class="line number24 index23 alt1"><code class="dart spaces">      </code><code class="dart comments">// 0, 1~(num-1), num</code></div>
+<div class="line number25 index24 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
+<div class="line number26 index25 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list = [];</code></div>
+<div class="line number27 index26 alt2"><code class="dart spaces">        </code><code class="dart comments">// 列印區隔符號</code></div>
+<div class="line number28 index27 alt1"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">'='</code> <code class="dart plain">* 20);</code></div>
+<div class="line number29 index28 alt2"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">"group $gth :"</code><code class="dart plain">);</code></div>
+<div class="line number30 index29 alt1"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
+<div class="line number31 index30 alt2"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
+<div class="line number32 index31 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
+<div class="line number33 index32 alt2"><code class="dart spaces">        </code><code class="dart plain">gth = gth + 1;</code></div>
+<div class="line number34 index33 alt1"><code class="dart spaces">      </code><code class="dart plain">} </code><code class="dart keyword">else</code> <code class="dart plain">{</code></div>
+<div class="line number35 index34 alt2"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
+<div class="line number36 index35 alt1"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
+<div class="line number37 index36 alt2"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
+<div class="line number38 index37 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
+<div class="line number39 index38 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
+<div class="line number40 index39 alt1"><code class="dart spaces">        </code><code class="dart comments">// 逐步將各組暫存的分組數列加入全班分組數列中</code></div>
+<div class="line number41 index40 alt2"><code class="dart spaces">        </code><code class="dart plain">cp2019.add(gp_list);</code></div>
+<div class="line number42 index41 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
+<div class="line number43 index42 alt2"><code class="dart spaces">    </code><code class="dart plain">}</code></div>
+<div class="line number44 index43 alt1"><code class="dart spaces">    </code><code class="dart comments">// 列出全班分組數列</code></div>
+<div class="line number45 index44 alt2"><code class="dart spaces">    </code><code class="dart plain">print(cp2019);</code></div>
+<div class="line number46 index45 alt1"><code class="dart spaces">  </code><code class="dart plain">});</code></div>
+<div class="line number47 index46 alt2"><code class="dart plain">}</code></div>
+<div class="line number47 index46 alt2"><code class="dart plain"></code></div>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=cf15f2e897874078c14b0d61b97e3d3c" width="800"></iframe></p><br />Dart 迴圈程式 << <a href='Dart 迴圈程式.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
