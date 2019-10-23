@@ -1,1 +1,1 @@
-var tipuesearch = {"pages": [{'title': 'About', 'text': 'http://mde.tw/cp2019 \xa0\xa0 \n https://dartpad.dev/embed-inline.html?id=bb67ffa422a777dbd5148a552f3dcfc2 \n', 'tags': '', 'url': 'About.html'}]};
+var tipuesearch = {"pages": [{'title': 'About', 'text': '倉儲: https://github.com/mdecourse/cp2019 \n http://mde.tw/cp2019 \xa0\xa0 \n https://dartpad.dev/embed-inline.html?id=bb67ffa422a777dbd5148a552f3dcfc2 \n', 'tags': '', 'url': 'About.html'}]};
