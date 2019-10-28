@@ -149,60 +149,20 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Dart 迴圈程式 << <a href='Dart 迴圈程式.html'>Previous</a> <a href='Dart 微分方程式.html'>Next</a> >> Dart 微分方程式<br /><h1>Dart 亂數分組</h1>
-<p>Gits:<a href="https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c">https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c</a></p>
-<p>Dartpad:<a href="https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c">https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c</a></p>
-<p>原始碼:</p>
-<div class="line number1 index0 alt2"><code class="dart keyword">import</code> <code class="dart string">'dart:html'</code><code class="dart plain">;</code></div>
-<div class="line number2 index1 alt1"> </div>
-<div class="line number3 index2 alt2"><code class="dart keyword">void</code> <code class="dart plain">main() {</code></div>
-<div class="line number4 index3 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每一組 10 人</code></div>
-<div class="line number5 index4 alt2"><code class="dart spaces">  </code><code class="dart plain">int num = 10;</code></div>
-<div class="line number6 index5 alt1"><code class="dart spaces">  </code><code class="dart comments">// 組序由 1 開始</code></div>
-<div class="line number7 index6 alt2"><code class="dart spaces">  </code><code class="dart plain">int gth = 1;</code></div>
-<div class="line number8 index7 alt1"><code class="dart spaces">  </code><code class="dart comments">// 迴圈序號變數</code></div>
-<div class="line number9 index8 alt2"><code class="dart spaces">  </code><code class="dart plain">int i;</code></div>
-<div class="line number10 index9 alt1"><code class="dart spaces">  </code><code class="dart comments">// 每組學員暫存數列</code></div>
-<div class="line number11 index10 alt2"><code class="dart spaces">  </code><code class="dart plain">var gp_list = [];</code></div>
-<div class="line number12 index11 alt1"><code class="dart spaces">  </code><code class="dart comments">// 全班分組數列</code></div>
-<div class="line number13 index12 alt2"><code class="dart spaces">  </code><code class="dart plain">var cp2019 = [];</code></div>
-<div class="line number14 index13 alt1"> </div>
-<div class="line number15 index14 alt2"><code class="dart spaces">  </code><code class="dart plain">HttpRequest.getString(</code></div>
-<div class="line number16 index15 alt1"><code class="dart spaces">          </code><code class="dart string">'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt'</code><code class="dart plain">)</code></div>
-<div class="line number17 index16 alt2"><code class="dart spaces">      </code><code class="dart plain">.then((String resp) {</code></div>
-<div class="line number18 index17 alt1"><code class="dart spaces">    </code><code class="dart comments">// 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列</code></div>
-<div class="line number19 index18 alt2"><code class="dart spaces">    </code><code class="dart plain">var stud_list = resp.trim().split(</code><code class="dart string">"\n"</code><code class="dart plain">);</code></div>
-<div class="line number20 index19 alt1"><code class="dart spaces">    </code><code class="dart comments">// 數列利用 shuffle() 方法以隨機方法弄亂順序</code></div>
-<div class="line number21 index20 alt2"><code class="dart spaces">    </code><code class="dart plain">stud_list.shuffle();</code></div>
-<div class="line number22 index21 alt1"><code class="dart spaces">    </code><code class="dart comments">// 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組</code></div>
-<div class="line number23 index22 alt2"><code class="dart spaces">    </code><code class="dart keyword">for</code> <code class="dart plain">(i = 0; i &lt; stud_list.length; i++) {</code></div>
-<div class="line number24 index23 alt1"><code class="dart spaces">      </code><code class="dart comments">// 0, 1~(num-1), num</code></div>
-<div class="line number25 index24 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
-<div class="line number26 index25 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list = [];</code></div>
-<div class="line number27 index26 alt2"><code class="dart spaces">        </code><code class="dart comments">// 列印區隔符號</code></div>
-<div class="line number28 index27 alt1"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">'='</code> <code class="dart plain">* 20);</code></div>
-<div class="line number29 index28 alt2"><code class="dart spaces">        </code><code class="dart plain">print(</code><code class="dart string">"group $gth :"</code><code class="dart plain">);</code></div>
-<div class="line number30 index29 alt1"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
-<div class="line number31 index30 alt2"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
-<div class="line number32 index31 alt1"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
-<div class="line number33 index32 alt2"><code class="dart spaces">        </code><code class="dart plain">gth = gth + 1;</code></div>
-<div class="line number34 index33 alt1"><code class="dart spaces">      </code><code class="dart plain">} </code><code class="dart keyword">else</code> <code class="dart plain">{</code></div>
-<div class="line number35 index34 alt2"><code class="dart spaces">        </code><code class="dart plain">print(stud_list[i]);</code></div>
-<div class="line number36 index35 alt1"><code class="dart spaces">        </code><code class="dart comments">// 在各分組數列中加入將對應的學員學號</code></div>
-<div class="line number37 index36 alt2"><code class="dart spaces">        </code><code class="dart plain">gp_list.add(stud_list[i]);</code></div>
-<div class="line number38 index37 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
-<div class="line number39 index38 alt2"><code class="dart spaces">      </code><code class="dart keyword">if</code> <code class="dart plain">(i % num == 0) {</code></div>
-<div class="line number40 index39 alt1"><code class="dart spaces">        </code><code class="dart comments">// 逐步將各組暫存的分組數列加入全班分組數列中</code></div>
-<div class="line number41 index40 alt2"><code class="dart spaces">        </code><code class="dart plain">cp2019.add(gp_list);</code></div>
-<div class="line number42 index41 alt1"><code class="dart spaces">      </code><code class="dart plain">}</code></div>
-<div class="line number43 index42 alt2"><code class="dart spaces">    </code><code class="dart plain">}</code></div>
-<div class="line number44 index43 alt1"><code class="dart spaces">    </code><code class="dart comments">// 列出全班分組數列</code></div>
-<div class="line number45 index44 alt2"><code class="dart spaces">    </code><code class="dart plain">print(cp2019);</code></div>
-<div class="line number46 index45 alt1"><code class="dart spaces">  </code><code class="dart plain">});</code></div>
-<div class="line number47 index46 alt2"><code class="dart plain">}</code></div>
-<div class="line number47 index46 alt2"><code class="dart plain"></code></div>
-<p><br/><br/><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=cf15f2e897874078c14b0d61b97e3d3c" width="800"></iframe></p>
-<br />Dart 迴圈程式 << <a href='Dart 迴圈程式.html'>Previous</a> <a href='Dart 微分方程式.html'>Next</a> >> Dart 微分方程式</div>
+    <div id="tipue_search_content">Dart 亂數分組 << <a href='Dart 亂數分組.html'>Previous</a> <br /><h1>Dart 微分方程式</h1>
+<p><span>Gits:<a href="https://gist.github.com/40823147/c5e90dc1d3d583b9985e73a6f628afc4">https://gist.github.com/40823147/c5e90dc1d3d583b9985e73a6f628afc4</a></span></p>
+<p><span>Dartpad:<a href="https://dartpad.dartlang.org/?id=c5e90dc1d3d583b9985e73a6f628afc4">https://dartpad.dartlang.org/?id=c5e90dc1d3d583b9985e73a6f628afc4</a></span></p>
+<p><span>原始碼:</span></p>
+<p>// 下列 Dart 程式, 利用 Runge Kutta 迭代運算法, 解常微分方程式<br/>// 設 t 為時間, x 則設為物體的位移<br/>// 假設要解 F=ma 的單一質量加上彈簧 (常數為 k) 與黏滯阻尼 (常數為 b)<br/>// f 為沿位移方向的施力<br/>// dx/dt = v, dv/dt = (f-kx-bv)/m<br/>// dx / dt = (t - x)/2, 起始值 t0=0, x0=1, 求 t=2 時的 x 值<br/>//<br/>// 已知起始值 t0 與 x0 後, 可以利用下列 rungeKutta 函式, 以<br/>// h 為每步階增量值, 求 dxdt 常微分方程式任一 t 的對應值 x<br/>// 定義函式 rungeKutta, 共有四個輸入變數<br/>// 物體質量<br/>const num m = 1;<br/>// 對質量的施力 f<br/>const num f = 0.0;<br/>// 彈簧係數<br/>const num k = 1;<br/>// 阻尼係數<br/>const num b = 1;</p>
+<p>// 呼叫運算時, 需要起始時間, 終點時間, 位移起始值與速度起始值, 增量 h<br/>rungeKutta(t0, x0, v0, t, h) {<br/> // 利用步階增量值 h 與 t 的起始及終點值<br/> // 計算需要迭代的次數 n<br/> int n = ((t - t0) / h).toInt();<br/> // 宣告 x 為雙浮點數, 且設為起始值 x0<br/> double x = x0;<br/> // 宣告 v 為雙浮點數, 且設為起始值 v0<br/> double v = v0;</p>
+<p>// 模擬運算前, 列出起始條件<br/> // 只列到小數點第三位, 時間、位移與速度以 \t 隔開, \t 代表插入 tab 符號, 可將資料複製到 Excel 進行繪圖<br/> print("${t0.toStringAsFixed(3)} \t ${x.toStringAsFixed(3)} \t ${v.toStringAsFixed(3)}");</p>
+<p>// 利用已知的 t0, x0, t 終點值與步階增量值 h, 迭代求 x 對應值<br/> // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n<br/> for (int i = 1; i &lt;= n; i++) {<br/> // 將此階段的 t 與 x 值代入 dxdt 與 dvdt 函式求下列四個浮點變數值<br/> // 因為必須兩個函式耦合, 必須同時計算<br/> double xk1 = h * dxdt(t0, x, v);<br/> double vk1 = h * dvdt(t0, x, v);<br/> double xk2 = h * dxdt(t0 + 0.5 * h, x + 0.5 * xk1, v + 0.5 * vk1);<br/> double vk2 = h * dvdt(t0 + 0.5 * h, x + 0.5 * xk1, v + 0.5 * vk1);<br/> double xk3 = h * dxdt(t0 + 0.5 * h, x + 0.5 * xk2, v + 0.5 * vk2);<br/> double vk3 = h * dvdt(t0 + 0.5 * h, x + 0.5 * xk2, v + 0.5 * vk2);<br/> double xk4 = h * dxdt(t0 + h, x + xk3, v + vk3);<br/> double vk4 = h * dvdt(t0 + h, x + xk3, v + vk3);<br/> // 利用上述四個變數值求此步階增量後的對應 x 值<br/> x = x + (1.0 / 6.0) * (xk1 + 2 * xk2 + 2 * xk3 + xk4);<br/> v = v + (1.0 / 6.0) * (vk1 + 2 * vk2 + 2 * vk3 + vk4);<br/> // 每次 for 迴圈執行最後, 準備計算下一個步階增量後的 x 對應值<br/> // t 起始值配合步階增量值 h, 進行增量<br/> t0 = t0 + h;<br/> // 列出各模擬運算時間點所得到的結果<br/> // 只列到小數點第三位, 時間、位移與速度以 \t 隔開, \t 代表插入 tab 符號, 可將資料複製到 Excel 進行繪圖<br/> print("${t0.toStringAsFixed(3)} \t ${x.toStringAsFixed(3)} \t ${v.toStringAsFixed(3)}");<br/> }</p>
+<p>// 完成 for 迴圈迭代後, 傳回與 t 終點值對應的 x 值<br/> return [x, v];<br/>}</p>
+<p>// 將微分方程式 "dx / dt = v" 定義為 dxdt 函式<br/>dxdt(t, x, v) {<br/> return v;<br/>}</p>
+<p>// dx/dt = v, dv/dt = (f-kx-bv)/m<br/>dvdt(t, x, v) {<br/> return (f - k * x - b * v) / m;<br/>}</p>
+<p>// 定義 main() 主函式內容, 目的在利用 rungeKutta 函式<br/>// 解常微分方程式<br/>main() {<br/>// Driver method<br/>// num 資料型別可以是整數或雙浮點數<br/> num t0 = 0;<br/> num x0 = 1;<br/> num v0 = 0;<br/> num t = 5;<br/> double h = 0.1;<br/> rungeKutta(t0, x0, v0, t, h);<br/>}</p>
+<p></p>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=c5e90dc1d3d583b9985e73a6f628afc4" width="800"></iframe></p><br />Dart 亂數分組 << <a href='Dart 亂數分組.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
