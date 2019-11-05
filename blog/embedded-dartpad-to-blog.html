@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+      <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>cp2019 40823147 - Archives</title>
+  <title>嵌入 Dartpad</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -18,6 +18,7 @@
 
   <!-- Feed -->
         <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="cp2019 40823147 Full Atom Feed" />
+          <link href="./feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="cp2019 40823147 Categories Atom Feed" />
 
   <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -38,6 +39,52 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+
+    <link href="./embedded-dartpad-to-blog.html" rel="canonical" />
+
+        <meta name="description" content="在此利用 https://dartpad.github.io 將位於 downloads 目錄中的 dart 程式導入.">
+
+        <meta name="author" content="40823147">
+
+        <meta name="tags" content="2019FallCP">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="cp2019 40823147"/>
+<meta property="og:title" content="嵌入 Dartpad"/>
+<meta property="og:description" content="在此利用 https://dartpad.github.io 將位於 downloads 目錄中的 dart 程式導入."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./embedded-dartpad-to-blog.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-11-05 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/40823147.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="2019FallCP"/>
+<meta property="og:image" content="./theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "嵌入 Dartpad",
+  "headline": "嵌入 Dartpad",
+  "datePublished": "2019-11-05 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "40823147",
+    "url": "./author/40823147.html"
+  },
+  "image": "./theme/images/post-bg.jpg",
+  "url": "./embedded-dartpad-to-blog.html",
+  "description": "在此利用 https://dartpad.github.io 將位於 downloads 目錄中的 dart 程式導入."
+}
+</script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJava.js"></script>
@@ -133,9 +180,14 @@ init_mathjax();
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
@@ -145,7 +197,13 @@ init_mathjax();
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">cp2019 40823147 - Archives</h1>
+        <h1 class="post-title">嵌入 Dartpad</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/40823147.html">40823147</a>
+            | <time datetime="週二 05 十一月 2019">週二 05 十一月 2019</time>
+        </span>
+        <!-- TODO : Modified check -->
             <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -159,18 +217,88 @@ init_mathjax();
     </form>
 </section>
 
-  <article class="post">
-    <div class="inner">
-      <dl>
-          <dt>週二 05 十一月 2019</dt>
-          <dd><a href="./embedded-dartpad-to-blog.html">嵌入 Dartpad</a></dd>
-          <dt>週日 03 十一月 2019</dt>
-          <dd><a href="./embedded-dartpad-to.html">嵌入 Dartpad</a></dd>
-          <dt>週六 02 十一月 2019</dt>
-          <dd><a href="./2019-Fall-Win10.html">2019 Fall CP 課程</a></dd>
-      </dl>
-    </div>
-  </article>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>在此利用 https://dartpad.github.io 將位於 downloads 目錄中的 dart 程式導入.</p>
+
+
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+
+<!-- 取 Dart 程式的按鈕 -->
+
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('sum')">Sum</button> <button onclick="getDart('runge_kutta')">Runge-Kutta</button> <button onclick="getDart('mass_spring_damping')">Mass Spring Damping</button> <button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('slithery')">Slithery</button> <button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button></p>
+
+<!-- 內建放入的 Dart 原始碼 -->
+
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=嵌入 Dartpad&amp;url=./embedded-dartpad-to-blog.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./embedded-dartpad-to-blog.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./embedded-dartpad-to-blog.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/2019fallcp.html">2019FallCP</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="./embedded-dartpad-to.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">嵌入 Dartpad</h2>
+                            <p class="post-nav-excerpt">在此利用 https://dartpad.github.io 將位於 downloads 目錄中的 dart 程式導入.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 
