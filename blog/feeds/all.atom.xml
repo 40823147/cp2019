@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cp2019 40823147</title><link href="https://40823147.github.io/cp2019/blog/" rel="alternate"></link><link href="https://40823147.github.io/cp2019/blog/feeds/all.atom.xml" rel="self"></link><id>https://40823147.github.io/cp2019/blog/</id><updated>2019-11-07T11:00:00+08:00</updated><entry><title>期中報告</title><link href="https://40823147.github.io/cp2019/blog/youtub-report.html" rel="alternate"></link><published>2019-11-07T11:00:00+08:00</published><updated>2019-11-07T11:00:00+08:00</updated><author><name>40823147</name></author><id>tag:40823147.github.io,2019-11-07:/cp2019/blog/youtub-report.html</id><summary type="html">&lt;p&gt;在此利用 https://www.youtube.com/watch?v=uUK2qEd1tmU 來完成作業
-&lt;iframe width="560" height="314" src="//www.youtube.com/embed/uUK2qEd1tmU" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;在此利用 https://www.youtube.com/watch?v=uUK2qEd1tmU 來完成作業
-&lt;iframe width="560" height="314" src="//www.youtube.com/embed/uUK2qEd1tmU" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cp2019 40823147</title><link href="https://40823147.github.io/cp2019/blog/" rel="alternate"></link><link href="https://40823147.github.io/cp2019/blog/feeds/all.atom.xml" rel="self"></link><id>https://40823147.github.io/cp2019/blog/</id><updated>2019-11-07T11:00:00+08:00</updated><entry><title>期中報告</title><link href="https://40823147.github.io/cp2019/blog/youtub-report.html" rel="alternate"></link><published>2019-11-07T11:00:00+08:00</published><updated>2019-11-07T11:00:00+08:00</updated><author><name>40823147</name></author><id>tag:40823147.github.io,2019-11-07:/cp2019/blog/youtub-report.html</id><summary type="html">&lt;p&gt;在此利用 https://www.youtube.com/watch?v=uUK2qEd1tmU 來完成作業&lt;/p&gt;
+&lt;iframe width="560" height="314" src="//www.youtube.com/embed/uUK2qEd1tmU" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+
+</summary><content type="html">&lt;p&gt;在此利用 https://www.youtube.com/watch?v=uUK2qEd1tmU 來完成作業&lt;/p&gt;
+&lt;iframe width="560" height="314" src="//www.youtube.com/embed/uUK2qEd1tmU" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+
 
 
 &lt;script  src="/yts/jsbin/scheduler-vfl3S_KkK/scheduler.js" type="text/javascript" name="scheduler/scheduler" &gt;&lt;/script&gt;
