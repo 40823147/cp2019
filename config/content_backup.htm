@@ -1,3 +1,34 @@
+<h1>About</h1>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('sum')">Sum</button> <button onclick="getDart('runge_kutta')">Runge-Kutta</button> <button onclick="getDart('mass_spring_damping')">Mass Spring Damping</button> <button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('slithery')">Slithery</button> <button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
 <h1>Dart 迴圈程式</h1>
 <p>Gita:<a href="https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2">https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
 <p>Dartpad:<a href="https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2">https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
@@ -104,3 +135,6 @@ main(){
 <p>// 定義 main() 主函式內容, 目的在利用 rungeKutta 函式<br/>// 解常微分方程式<br/>main() {<br/>// Driver method<br/>// num 資料型別可以是整數或雙浮點數<br/> num t0 = 0;<br/> num x0 = 1;<br/> num v0 = 0;<br/> num t = 20;<br/> double h = 0.1;<br/> rungeKutta(t0, x0, v0, t, h);<br/>}</p>
 <p></p>
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=f4667a3cbebf547191742f57b1a920b5" width="800"></iframe><img alt="" height="358" src="/images/阻尼0.png" width="600"/></p>
+<h1>Dart 流程圖</h1>
+<img alt="" height="1303" src="/images/流程圖.png" width="1269"/><h1>Dart 重量</h1>
+<p><iframe height="600" src="https://dartpad.dartlang.org/embed-dart.html?id=755d79b51d123f370a45b7352503969e&amp;theme=dark" width="800"></iframe></p>
