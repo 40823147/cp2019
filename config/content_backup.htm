@@ -187,6 +187,32 @@ void main() {
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <!-- 內建放入的 Dart 原始碼 --></p>
 <p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Weight conversion&amp;theme=dark" width="800"></iframe></p>
 <h1>Dart 溫度</h1>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
 <pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">CtoF(num c) {
   return c * 9 / 5 + 32;
 }
@@ -221,5 +247,7 @@ main() {
   }
 }</pre>
 <!-- 取 Dart 程式的按鈕 -->
-<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <!-- 內建放入的 Dart 原始碼 --></p>
-<p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/temperature/Fahrenheit、Celsius conversion&amp;theme=dark" width="800"></iframe></p>
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><button onclick="getDart('Celsius to Fahrenheit')">Celsius to Fahrenheit</button> <button onclick="getDart('Fahrenheit to Celsius')">Fahrenheit to Celsius</button></p>
+<p><!-- 內建放入的 Dart 原始碼 --></p>
+<p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Fahrenheit、Celsius conversion&amp;theme=dark" width="800"></iframe></p>
