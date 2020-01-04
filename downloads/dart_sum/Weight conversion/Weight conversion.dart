@@ -1,5 +1,5 @@
 //輸入轉換重量
-List lbandkg = ["25kg","30lb","45kg","60kg","75kg","90kg"];
+List lbandkg = ["25kg","30kg","45kg","60kg","75kg","90kg"];
 
 void main() {
   for (var i in lbandkg) {
