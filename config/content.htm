@@ -137,4 +137,23 @@ main(){
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=f4667a3cbebf547191742f57b1a920b5" width="800"></iframe><img alt="" height="358" src="/images/阻尼0.png" width="600"/></p>
 <h1>Dart 流程圖</h1>
 <img alt="" height="1303" src="/images/流程圖.png" width="1269"/><h1>Dart 重量</h1>
-<p><iframe height="600" src="https://dartpad.dartlang.org/embed-dart.html?id=755d79b51d123f370a45b7352503969e" width="800"></iframe></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">//輸入轉換重量
+List lbandkg = ["25kg","30kg","45kg","60kg","75kg","90kg"];
+
+void main() {
+  for (var i in lbandkg) {
+    if (i[3] == "g") {
+      var o = (i[0] + i[1]);
+      var kg = num.parse(o);
+      num lb = kg * 2.20462262;
+      print("$kg 公斤等於 $lb 磅");
+    }
+    if (i[3] == "b") {
+      var o = (i[0] + i[1]);
+      var lb = num.parse(o);
+      num kg = lb * 0.45359237;
+      print("$lb 磅 等於 $kg 公斤");
+    }
+  }
+}</pre>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019$amp;gh_path=downloads/dart_sum/Weight conversion&amp;theme=dark" width="800"></iframe></p>
