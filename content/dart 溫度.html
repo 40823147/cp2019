@@ -149,20 +149,54 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Dart 迴圈程式.html'>Next</a> >> Dart 迴圈程式<br /><h1>About</h1>
+    <div id="tipue_search_content">Dart 重量 << <a href='Dart 重量.html'>Previous</a> <br /><h1>dart 溫度</h1>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">CtoF(num c) {
+  return c * 9 / 5 + 32;
+}
+
+FtoC(num f) {
+  return (f - 32) * 5 / 9;
+}
+
+main() {
+  int len;
+
+  var type;
+
+  var number;
+   //在此設定溫度
+  List temp = ["222C", "30C", "50F", "40C", "23F"];
+
+  for (var data in temp) {
+    len = data.length;
+
+    type = data[len - 1];
+
+    number = data.substring(0, len - 1);
+
+    number = int.parse(number);
+
+    if (type == "C") {
+      print("攝氏 $number 度 = 華氏 ${CtoF(number)} 度");
+    } else {
+      print("華氏 $number 度 = 攝氏 ${FtoC(number)} 度");
+    }
+  }
+}</pre>
+<p><br/><br/><br/></p>
 <script>
 function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
     document.getElementById("iframe").src = source ;
 }
 
 function getHtmlDart(dirname){
-    source = "https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
 document.getElementById("iframe").src = source ;
 }
 
 function getFlutter(dirname){
-    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum" + dirname + "&theme=dark";
 document.getElementById("iframe").src = source ;
 }
 
@@ -177,10 +211,8 @@ document.getElementById("iframe").height = 600 ;
 }
 </script>
 <!-- 取 Dart 程式的按鈕 -->
-<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('sum')">Sum</button> <button onclick="getDart('runge_kutta')">Runge-Kutta</button> <button onclick="getDart('mass_spring_damping')">Mass Spring Damping</button> <button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('slithery')">Slithery</button> <button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button></p>
-<!-- 內建放入的 Dart 原始碼 -->
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
-<br /> <a href='Dart 迴圈程式.html'>Next</a> >> Dart 迴圈程式</div>
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <!-- 內建放入的 Dart 原始碼 --></p>
+<p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Fahrenheit、Celsius conversion&amp;theme=dark" width="800"></iframe></p><br />Dart 重量 << <a href='Dart 重量.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">

@@ -136,7 +136,8 @@ main(){
 <p></p>
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=f4667a3cbebf547191742f57b1a920b5" width="800"></iframe><img alt="" height="358" src="/images/阻尼0.png" width="600"/></p>
 <h1>Dart 流程圖</h1>
-<img alt="" height="1303" src="/images/流程圖.png" width="1269"/><h1>Dart 重量</h1>
+<p><img alt="" height="1303" src="/images/流程圖.png" width="1269"/></p>
+<h1>Dart 重量</h1>
 <script>
 function getDart(dirname){
     source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
@@ -184,4 +185,68 @@ void main() {
 }</pre>
 <!-- 取 Dart 程式的按鈕 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <!-- 內建放入的 Dart 原始碼 --></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Weight conversion&amp;theme=dark" width="800"></iframe></p>
+<p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Weight conversion&amp;theme=dark" width="800"></iframe></p>
+<h1>dart 溫度</h1>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">CtoF(num c) {
+  return c * 9 / 5 + 32;
+}
+
+FtoC(num f) {
+  return (f - 32) * 5 / 9;
+}
+
+main() {
+  int len;
+
+  var type;
+
+  var number;
+   //在此設定溫度
+  List temp = ["222C", "30C", "50F", "40C", "23F"];
+
+  for (var data in temp) {
+    len = data.length;
+
+    type = data[len - 1];
+
+    number = data.substring(0, len - 1);
+
+    number = int.parse(number);
+
+    if (type == "C") {
+      print("攝氏 $number 度 = 華氏 ${CtoF(number)} 度");
+    } else {
+      print("華氏 $number 度 = 攝氏 ${FtoC(number)} 度");
+    }
+  }
+}</pre>
+<p><br/><br/><br/></p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823147&gh_repo=cp2019&gh_path=downloads/dart_sum" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <!-- 內建放入的 Dart 原始碼 --></p>
+<p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Fahrenheit、Celsius conversion&amp;theme=dark" width="800"></iframe></p>
