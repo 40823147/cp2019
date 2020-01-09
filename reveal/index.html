@@ -39,12 +39,12 @@ CMSimfly 網際內容管理
 <div class="slides">
 <section data-markdown>
     <script type="text/template">
-## CMSimfly 網際內容管理
+## Dart 迴圈
 
 ### KMOLab
 
 <small>
-Created by [KMOLab](http://lab.kmol.info/)
+Created by [KMOLab](https://dartpad.dartlang.org/embed-html.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2)
 </small>
 
 [CMSimfly 網誌](./../blog/index.html)
@@ -57,14 +57,12 @@ Created by [KMOLab](http://lab.kmol.info/)
 						
 <section data-markdown>
     <script type="text/template">
-# 投影片快捷鍵
+## Dart 亂數分組
 
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
+### KMOLab
+
+<small>
+Created by [KMOLab](https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c)
 
     </script>
 </section>
@@ -74,13 +72,13 @@ Created by [KMOLab](http://lab.kmol.info/)
 <section>
 <section data-markdown>
     <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-# 數學符號與方程式
+## Dart 微分方程式
 
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
+### KMOLab
 
-$$I = \int \rho R^{2} dV$$
+<small>
+Created by [KMOLab](https://dartpad.dartlang.org/?id=c5e90dc1d3d583b9985e73a6f628afc4)
+
     </script>
 </section>
 
@@ -89,33 +87,13 @@ $$I = \int \rho R^{2} dV$$
 						
 <section data-markdown>
     <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
+## Dart 微分方程式
 
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
+### KMOLab
+
+<small>
+Created by [KMOLab](https://dartpad.dartlang.org/?id=c5e90dc1d3d583b9985e73a6f628afc4)
+
     </script>
 </section>
 
@@ -124,11 +102,14 @@ make.start()
 						
 <section data-markdown>
     <script type="text/template">
-## 使用 iframe 導入影片
+## Dart 重量
 
-### 導入影片 template
+### KMOLab
 
-<iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<small>
+Created by [KMOLab](https://https://dartpad.dartlang.org/embed-dart.html?id=755d79b51d123f370a45b7352503969e)
+
+  
     </script>
 </section>
 
@@ -143,26 +124,14 @@ make.start()
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 <script>
-        // More info https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
+## Dart 溫度
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+### KMOLab
 
-            // More info https://github.com/hakimel/reveal.js#dependencies
-            dependencies: [
-                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'plugin/zoom-js/zoom.js', async: true },
-                { src: 'plugin/notes/notes.js', async: true },
-                { src: 'plugin/math/math.js', async: true }
-            ]
-        });
+<small>
+Created by [KMOLab](https://dartpad.dartlang.org/embed-dart.html?id=ef2d7637fc055fb3a9af1ea659dc2ec5)
+
+ 
 </script>
 </body>
 

@@ -31,12 +31,12 @@ document.getElementById("iframe").height = 600 ;
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
 <h1>Dart 迴圈程式</h1>
 <p>Gita:<a href="https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2">https://gist.github.com/40823147/1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
-<p>Dartpad:<a href="https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2">https://mde.tw/dartpad/?id=1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
+<p>Dartpad:<a href="https://dartpad.dartlang.org/embed-html.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2">https://dartpad.dartlang.org/embed-html.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2</a></p>
 <p>原始碼:</p>
 <pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">void main() {
     print("哈囉!");
 }</pre>
-<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2" width="800"></iframe></p>
+<p><iframe height="600" src="https://dartpad.dartlang.org/embed-html.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2" width="800"></iframe></p>
 <p><span>Gits:<a href="https://gist.github.com/40823147/33eae5a0423ed36e8fe679641932807d">https://gist.github.com/40823147/33eae5a0423ed36e8fe679641932807d</a></span></p>
 <p><a href="https://dartpad.dev/embed-inline.html?id=bb67ffa422a777dbd5148a552f3dcfc2"><span>Dartpad：</span></a><a href="https://mde.tw/dartpad/?id=33eae5a0423ed36e8fe679641932807d">https://mde.tw/dartpad/?id=33eae5a0423ed36e8fe679641932807d</a></p>
 <p>原始碼:</p>
@@ -54,8 +54,7 @@ main(){
 }
 </pre>
 </div>
-<p><br/><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=33eae5a0423ed36e8fe679641932807d" width="800"></iframe></p>
-<h1>Dart 亂數分組</h1>
+<p><br/><iframe height="600" src="https://dartpad.dartlang.org/embed-html.html?id=1d4292cdc1748c8f89dc7e9e05fb49f2" width="800"></iframe></p><h1>Dart 亂數分組</h1>
 <p>Gits:<a href="https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c">https://gist.github.com/40823147/cf15f2e897874078c14b0d61b97e3d3c</a></p>
 <p>Dartpad:<a href="https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c">https://mde.tw/dartpad/?id=cf15f2e897874078c14b0d61b97e3d3c</a></p>
 <p>原始碼:</p>
@@ -252,3 +251,31 @@ main() {
 <p><!-- 內建放入的 Dart 原始碼 --></p>
 <p><br/><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823147&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_sum/Fahrenheit、Celsius conversion&amp;theme=dark" width="800"></iframe></p>
 <h1>Dart 國旗</h1>
+<p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+</p>
